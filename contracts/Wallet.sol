@@ -30,8 +30,6 @@ contract SimpleWallet {
         // Hints:
         // * You can access the balance of this contract by: `address(this).balance`
         // * You can transfer x amount of funds to y receiver by: `payable(y).transfer(x)`
-        require(address(this).balance >= amount, "Insufficient balance");
-        payable(receiver).transfer(amount);
     }
 
     function getBalance() public view returns (uint256) {
@@ -39,6 +37,5 @@ contract SimpleWallet {
         // Hints:
         // * You can access the balance of this contract by: `address(this).balance`
         // * You can return a value from a Solidity function using the `return` keyword
-        return address(this).balance;
     }
 }
