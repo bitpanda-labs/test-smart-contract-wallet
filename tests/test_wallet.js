@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { ethers } from "hardhat";
 
-describe("SimpleWallet Contract", function () {
+describe("Wallet Contract", function () {
   let walletContract;
   let owner;
   let addr1;
@@ -9,7 +9,7 @@ describe("SimpleWallet Contract", function () {
   beforeEach(async function () {
     const Wallet = await ethers.getContractFactory("Wallet");
     [owner, addr1] = await ethers.getSigners();
-    walletContract = await SimpleWallet.deploy();
+    walletContract = await Wallet.deploy();
     await walletContract.deployed();
   });
 

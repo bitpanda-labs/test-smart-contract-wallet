@@ -10,7 +10,7 @@ pragma solidity >=0.8.2 <0.9.0;
 // * to allow withdrawals to another account if there is enough balance in the wallet
 // * to return the current balance of the wallet
 
-contract SimpleWallet {
+contract Wallet {
     address public owner;
 
     modifier onlyOwner() {
